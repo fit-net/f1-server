@@ -2,7 +2,7 @@ import pandas as pd
 import psycopg2
 from psycopg2 import sql
 
-csv_file_path = './csv/sprint_results.csv'
+csv_file_path = './csv/races.csv'
 
 
 df = pd.read_csv(csv_file_path)
@@ -25,7 +25,7 @@ conn = psycopg2.connect(**db_params)
 cur = conn.cursor()
 
 
-table_name = 'sprint_results'
+table_name = 'races'
 
 
 create_table_query = sql.SQL("""
